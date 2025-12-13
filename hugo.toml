@@ -24,10 +24,16 @@ pagerSize = 10
 # Configuração do Giscus (comentários via GitHub Discussions)
 # Para configurar, acesse: https://giscus.app/pt
 [params.giscus]
-  repo = "SEU_USUARIO/SEU_REPOSITORIO"  # Ex: "HaisonOhara/CodeLab-TechBlog"
-  repoId = "SEU_REPO_ID"  # Obter em giscus.app
-  category = "General"
-  categoryId = "SEU_CATEGORY_ID"  # Obter em giscus.app
+  repo = "HaisonOhara/CodeLab-TechBlog"
+  repoId = "R_kgDOQoQ7nw"  # Copie do giscus.app
+  category = "Comentários"  # Nome da categoria que você criou
+  categoryId = "DIC_kwDOQoQ7n84CzwQK"  # Copie do giscus.app
+  mapping = "pathname"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "pt"
 
 [params.homeInfoParams]
   Title = "👨‍💻Laboratório de Artigos da CodeLab"
