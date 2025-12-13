@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Object Calisthenics on CodeLab - Tech Blog</title>
-    <link>http://localhost:1313/tags/object-calisthenics/</link>
+    <link>http://localhost:1313/CodeLab-TechBlog/tags/object-calisthenics/</link>
     <description>Recent content in Object Calisthenics on CodeLab - Tech Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/object-calisthenics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/CodeLab-TechBlog/tags/object-calisthenics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Object Calisthenics: Don&#39;t Use Else</title>
-      <link>http://localhost:1313/posts/object-calisthenics/</link>
+      <link>http://localhost:1313/CodeLab-TechBlog/posts/object-calisthenics/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/object-calisthenics/</guid>
+      <guid>http://localhost:1313/CodeLab-TechBlog/posts/object-calisthenics/</guid>
       <description>Explorando a regra &amp;#39;Don&amp;#39;t Use Else&amp;#39; do Object Calisthenics para escrever código mais limpo e legível</description>
     </item>
   </channel>

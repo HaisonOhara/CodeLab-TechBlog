@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/boas-pr%C3%A1ticas/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/tags/boas-pr%C3%A1ticas/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/categories/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/clean-code/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/tags/clean-code/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/comentarios-article/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/posts/comentarios-article/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/desenvolvimento/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/categories/desenvolvimento/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/object-calisthenics/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/tags/object-calisthenics/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/object-calisthenics/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/posts/object-calisthenics/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/posts/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programa%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/tags/programa%C3%A7%C3%A3o/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/CodeLab-TechBlog/tags/</loc>
     <lastmod>2025-12-13T00:00:00+00:00</lastmod>
   </url>
 </urlset>
