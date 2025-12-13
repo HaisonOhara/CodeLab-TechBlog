@@ -1,0 +1,52 @@
+baseURL = "https://HaisonOhara.github.io/"
+languageCode = "pt-br"
+title = "CodeLab - Tech Blog"
+theme = "PaperMod"
+
+pagerSize = 10
+
+# Sistema de comentários (escolha uma opção abaixo)
+# Opção 1: Disqus (descomente e adicione seu shortname)
+# disqusShortname = "seu-site-no-disqus"
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false  # Desabilita botões de compartilhamento
+  comments = true  # Habilita comentários globalmente
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+  TocOpen = false
+
+# Configuração do Giscus (comentários via GitHub Discussions)
+# Para configurar, acesse: https://giscus.app/pt
+[params.giscus]
+  repo = "SEU_USUARIO/SEU_REPOSITORIO"  # Ex: "HaisonOhara/CodeLab-TechBlog"
+  repoId = "SEU_REPO_ID"  # Obter em giscus.app
+  category = "General"
+  categoryId = "SEU_CATEGORY_ID"  # Obter em giscus.app
+
+[params.homeInfoParams]
+  Title = "👨‍💻Laboratório de Artigos da CodeLab"
+  Content = """
+  Seja bem vindo ao nosso laboratório de artigos, aqui você poderá encontrar artigos
+  Sobre programação, IA, arquitetura de software e desenvolvimento de carreira 🚀
+  """
+
+[[menu.main]]
+  name = "Artigos"
+  url = "/posts/"
+  weight = 1
+
+# [[menu.main]]
+#   name = "Vídeos"
+#   url = "/videos/"
+#   weight = 2
+
+# [[menu.main]]
+#   name = "Inscrição"
+#   url = "/inscricao/"
+#   weight = 3

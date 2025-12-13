@@ -1,0 +1,32 @@
+baseURL = "https://HaisonOhara.github.io/"
+languageCode = "pt-br"
+title = "Blog Tech"
+theme = "PaperMod"
+
+paginate = 10
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = true
+
+[params.homeInfoParams]
+  Title = "Conteúdo tech, direto ao ponto"
+  Content = "Artigos sobre programação, IA, arquitetura e carreira."
+
+[[menu.main]]
+  name = "Artigos"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "Vídeos"
+  url = "/videos/"
+  weight = 2
+
+[[menu.main]]
+  name = "Inscrição"
+  url = "/inscricao/"
+  weight = 3

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Comentários, Amigos ou Inimigos? | CodeLab - Tech Blog</title>
+<meta name="keywords" content="clean code, boas práticas, programação">
+<meta name="description" content="
+Comentários, Amigos ou Inimigos?
+Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!
+Explique-se no código
+Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário.
+">
+<meta name="author" content="Haison Ohara">
+<link rel="canonical" href="http://localhost:1313/posts/comentarios-article/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.aa483ead7c91956807a9c038406d2ffec467bf1d43d976a31e15e110ea849ff2.css" integrity="sha256-qkg&#43;rXyRlWgHqcA4QG0v/sRnvx1D2XajHhXhEOqEn/I=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/comentarios-article/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/posts/comentarios-article/">
+  <meta property="og:site_name" content="CodeLab - Tech Blog">
+  <meta property="og:title" content="Comentários, Amigos ou Inimigos?">
+  <meta property="og:description" content=" Comentários, Amigos ou Inimigos? Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!
+Explique-se no código Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário. ">
+  <meta property="og:locale" content="pt-br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-13T00:00:00+00:00">
+    <meta property="article:tag" content="Clean Code">
+    <meta property="article:tag" content="Boas Práticas">
+    <meta property="article:tag" content="Programação">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Comentários, Amigos ou Inimigos?">
+<meta name="twitter:description" content="
+Comentários, Amigos ou Inimigos?
+Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!
+Explique-se no código
+Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário.
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Comentários, Amigos ou Inimigos?",
+      "item": "http://localhost:1313/posts/comentarios-article/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Comentários, Amigos ou Inimigos?",
+  "name": "Comentários, Amigos ou Inimigos?",
+  "description": " Comentários, Amigos ou Inimigos? Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!\nExplique-se no código Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário. ",
+  "keywords": [
+    "clean code", "boas práticas", "programação"
+  ],
+  "articleBody": " Comentários, Amigos ou Inimigos? Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!\nExplique-se no código Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário. Perceba a diferença no primeiro exemplo, o if estava tão claro que não foi necessário incluir um comentário.\nExemplos de Comentários Aceitáveis Comentários informativos São aqueles que nos informam algo sobre o código (ah jura?). Um exemplo, seria uma breve explicação de um método antes que ele seja executado, algo como:\nNaturalmente, podemos notar que nesse caso, uma nomenclatura mais elaborada poderia trazer clareza a esse trecho, algo como: responderBeingTested(); logo, esse tipo de comentário pode ser excluído quando nomeamos melhor as variáveis envolvidas. No entanto, se for usado de forma clara e objetiva, sem problemas. Só tome cuidado com os excessos.\nComentários de Intenção Comentários de Intenção são, basicamente, comentários onde explicamos o motivo de uma decisão em um código, ou seja, ele revela nossas intenções por trás de um trecho específico. O porquê seguimos a lógica que ali está aplicada, quais características do problema foram consideradas, e etc.\nEsse tipo de comentário, na minha opinião, pode sujar um código. Entretanto, se usado com moderação e sabedoria, pode ser uma boa ferramenta para contextualizar novos integrantes da equipe. Ainda assim tenho minhas ressalvas quanto a esse comentário, pois acredito que uma documentação bem feita do Software, poderia, inclusive, explicar as motivações de trechos dos códigos mais “cabeludos”.\nComentários de Esclarecimento Nem tudo no mundo são flores… Você já deve ter ouvido essa frase, e no mundo da tecnologia não seria diferente! Por vezes somos obrigados a utilizar bibliotecas que resolvem nossos problemas mas que não possuem uma nomenclatura explicativa. Nestes casos, explicar o que determinadas partes do código estão fazendo, pode ser útil, mas tome cuidado, você não quer induzir ninguém ao entendimento errado do código! Eu recomendo utilizar o Comentário de Esclarecimento quando você tiver duas certezas em mente:\nNão há algo melhor a ser feito para que esse código possa ser compreendido. Eu tenho total certeza do que estou falando, não irei induzir ninguém a uma confusão. Comentários de Alerta Estes comentários são aqueles em que avisamos sobre determinado trecho do código. E não, isso não te dá abertura para escrever coisas desse tipo:\nO ideal, aqui, seria avisar sobre coisas que são praticamente inevitáveis, algo como um caso de teste que demore demais para ser executado. Assim, você pode comentar logo acima dele, explicando que ele foi desabilitado num primeiro momento devido ao tempo de execução, mas que pode ser executado sempre que houver um tempo disponível. Existem formas melhores de fazer isso, mas para esse objetivo, o comentário pode ser útil também.\nComentários ToDo Começo esse com uma pergunta: qual foi a última vez que você voltou a um código para melhorar/implementar aquele trecho que você marcou um “ToDo” como comentário?\nSinceramente, a resposta dessa pergunta vai indicar a utilidade desse comentário para você. Eu, particularmente, não gosto. Em boa parte das vezes, me envolvo no código, resolvo o problema e esqueço daquele ToDo feito há 2 dias. Por isso, prefiro priorizar o que deve ser feito. Para mim, um ToDo é uma task futura escondida, assim, nesse caso, é melhor registrá-la no JIRA (ou em qualquer outra plataforma com esse fim) do que dentro do seu próprio código. Mas se mesmo assim você preferir usar um ToDo, tudo bem (só não será convidado para o meu aniversário), existem ferramentas que potencializam os ToDos, evitando que você se esqueça deles (Sonar, por exemplo), e podendo ajudar bastante. Lembre-se que é sempre uma questão de manter o código claro e limpo. Então se você usa esses comentários e consegue manter a qualidade do código, vá em frente :).\nComentários Ruins Agora é hora de tirar as crianças da sala, vamos falar dos Comentários Ruins, aqueles que você deve evitar a todo custo no código.\nQualquer comentário mal escrito Como ressaltamos até esse momento, comentários na maioria das vezes podem (e muitas vezes, devem) ser dispensados. Contudo, nos casos em que eles são necessários, devemos fazê-los com muito cuidado, escrever de forma clara para que QUALQUER leitor possa utilizar seu código. Não esqueça, se nosso código precisa ser claro, nossos comentários também precisam ser!\nComentários redundantes Tenho certeza que em algum momento da sua vida, você encontrou algum código parecido com isso:\nObserve como este comentário tem uma utilidade total de 0%, ele literalmente explica o que o código já deixa claro.\nComentários assim, servem somente para poluir o seu código, e consequentemente, dificultar todo o entendimento.\nComentários Longos Esse é bem claro, comentários longos somente poluem código, evite-os a todo custo, não escreva textos enormes em seus comentários. Existem lugares específicos para esse tipo de detalhamento, como uma documentação do seu Software, ou um artigo no Medium, caso você esteja muito inspirado.\nCódigos como comentários Exemplo retirado de Código limpo: Habilidades práticas do Agile Software(Robert C. Martin)\nPara mim, esses são os piores. É mais válido você colocar um link no seu código para esse site aqui: http://www.pudim.com.br/, tenho certeza que será mais útil.\nCódigos comentados, na maioria das vezes, não explicam nada, eles ficam ali, perdidos commit após commit, ninguém sabe se eles são um lembrete, se são importantes, ou mesmo, se são o resto perdido do código de alguém. Resumindo, eles são inúteis. A própria ideia de se salvar trechos de código como comentário para se ter um histórico, já deixou de fazer sentido desde que ferramentas de versionamento de código como o git passaram a ser utilizadas, e olha que já faz um tempinho hein…\nComentários Enganadores Sabemos que, no fim do dia, nós programadores e programadoras, só queremos fazer um código bom e claro, porém, é comum encontrarmos comentários com informações bem confusas, ou mesmo informações que deixaram de ser verdade há um tempo. E qual seria o problema disso? Esses comentários criam o ambiente perfeito para alguém desavisado passar boa parte do dia tentando resolver um bug, com a única certeza de que aqueles comentários são a mais pura verdade, quando na verdade, eles são imensas desinformações, que podem, inclusive, estar omitindo uma informação que resolveria esse bug em minutos.\nConclusão Existem muitos outros tipos de comentários bons e ruins, recomendo fortemente a leitura do livro Clean Code (do nosso famoso Uncle Bob), livro que usei como referência para este artigo. Garanto que você irá encontrar um aprofundamento muito bom sobre esse assunto, e muitos outros por lá.\nPor hoje é só galerinha, espero ter ajudado de alguma forma. Até a próxima! :)\nReferência: Código limpo: Habilidades práticas do Agile Software(Robert C. Martin)\n",
+  "wordCount" : "1260",
+  "inLanguage": "en",
+  "datePublished": "2025-12-13T00:00:00Z",
+  "dateModified": "2025-12-13T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Haison Ohara"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/comentarios-article/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CodeLab - Tech Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="CodeLab - Tech Blog (Alt + H)">CodeLab - Tech Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="Artigos">
+                    <span>Artigos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Comentários, Amigos ou Inimigos?
+    </h1>
+    <div class="post-meta"><span title='2025-12-13 00:00:00 +0000 UTC'>December 13, 2025</span>&nbsp;·&nbsp;<span>6 min</span>&nbsp;·&nbsp;<span>Haison Ohara</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#coment%c3%a1rios-amigos-ou-inimigos" aria-label="Comentários, Amigos ou Inimigos?">Comentários, Amigos ou Inimigos?</a><ul>
+                        
+                <li>
+                    <a href="#explique-se-no-c%c3%b3digo" aria-label="Explique-se no código">Explique-se no código</a></li></ul>
+                </li>
+                <li>
+                    <a href="#exemplos-de-coment%c3%a1rios-aceit%c3%a1veis" aria-label="Exemplos de Comentários Aceitáveis">Exemplos de Comentários Aceitáveis</a><ul>
+                        
+                <li>
+                    <a href="#coment%c3%a1rios-informativos" aria-label="Comentários informativos">Comentários informativos</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-de-inten%c3%a7%c3%a3o" aria-label="Comentários de Intenção">Comentários de Intenção</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-de-esclarecimento" aria-label="Comentários de Esclarecimento">Comentários de Esclarecimento</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-de-alerta" aria-label="Comentários de Alerta">Comentários de Alerta</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-todo" aria-label="Comentários ToDo">Comentários ToDo</a></li></ul>
+                </li>
+                <li>
+                    <a href="#coment%c3%a1rios-ruins" aria-label="Comentários Ruins">Comentários Ruins</a><ul>
+                        
+                <li>
+                    <a href="#qualquer-coment%c3%a1rio-mal-escrito" aria-label="Qualquer comentário mal escrito">Qualquer comentário mal escrito</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-redundantes" aria-label="Comentários redundantes">Comentários redundantes</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-longos" aria-label="Comentários Longos">Comentários Longos</a></li>
+                <li>
+                    <a href="#c%c3%b3digos-como-coment%c3%a1rios" aria-label="Códigos como comentários">Códigos como comentários</a></li>
+                <li>
+                    <a href="#coment%c3%a1rios-enganadores" aria-label="Comentários Enganadores">Comentários Enganadores</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclus%c3%a3o" aria-label="Conclusão">Conclusão</a><ul>
+                        
+                <li>
+                    <a href="#refer%c3%aancia" aria-label="Referência:">Referência:</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><hr>
+<h2 id="comentários-amigos-ou-inimigos">Comentários, Amigos ou Inimigos?<a hidden class="anchor" aria-hidden="true" href="#comentários-amigos-ou-inimigos">#</a></h2>
+<p>Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!</p>
+<h3 id="explique-se-no-código">Explique-se no código<a hidden class="anchor" aria-hidden="true" href="#explique-se-no-código">#</a></h3>
+<p>Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário.
+<img loading="lazy" src="/comentarios-01.png"></p>
+<p><img loading="lazy" src="/comentarios-02.png">
+Perceba a diferença no primeiro exemplo, o if estava tão claro que não foi necessário incluir um comentário.</p>
+<h2 id="exemplos-de-comentários-aceitáveis">Exemplos de Comentários Aceitáveis<a hidden class="anchor" aria-hidden="true" href="#exemplos-de-comentários-aceitáveis">#</a></h2>
+<h3 id="comentários-informativos">Comentários informativos<a hidden class="anchor" aria-hidden="true" href="#comentários-informativos">#</a></h3>
+<p>São aqueles que nos informam algo sobre o código (ah jura?). Um exemplo, seria uma breve explicação de um método antes que ele seja executado, algo como:</p>
+<p><img loading="lazy" src="/comentarios-03.png"></p>
+<p>Naturalmente, podemos notar que nesse caso, uma nomenclatura mais elaborada poderia trazer clareza a esse trecho, algo como: responderBeingTested(); logo, esse tipo de comentário pode ser excluído quando nomeamos melhor as variáveis envolvidas. No entanto, se for usado de forma clara e objetiva, sem problemas. Só tome cuidado com os excessos.</p>
+<h3 id="comentários-de-intenção">Comentários de Intenção<a hidden class="anchor" aria-hidden="true" href="#comentários-de-intenção">#</a></h3>
+<p>Comentários de Intenção são, basicamente, comentários onde explicamos o motivo de uma decisão em um código, ou seja, ele revela nossas intenções por trás de um trecho específico. O porquê seguimos a lógica que ali está aplicada, quais características do problema foram consideradas, e etc.</p>
+<p>Esse tipo de comentário, na minha opinião, pode sujar um código. Entretanto, se usado com moderação e sabedoria, pode ser uma boa ferramenta para contextualizar novos integrantes da equipe. Ainda assim tenho minhas ressalvas quanto a esse comentário, pois acredito que uma documentação bem feita do Software, poderia, inclusive, explicar as motivações de trechos dos códigos mais &ldquo;cabeludos&rdquo;.</p>
+<h3 id="comentários-de-esclarecimento">Comentários de Esclarecimento<a hidden class="anchor" aria-hidden="true" href="#comentários-de-esclarecimento">#</a></h3>
+<p>Nem tudo no mundo são flores… Você já deve ter ouvido essa frase, e no mundo da tecnologia não seria diferente! Por vezes somos obrigados a utilizar bibliotecas que resolvem nossos problemas mas que não possuem uma nomenclatura explicativa. Nestes casos, explicar o que determinadas partes do código estão fazendo, pode ser útil, mas tome cuidado, você não quer induzir ninguém ao entendimento errado do código! Eu recomendo utilizar o Comentário de Esclarecimento quando você tiver duas certezas em mente:</p>
+<ol>
+<li>Não há algo melhor a ser feito para que esse código possa ser compreendido.</li>
+<li>Eu tenho total certeza do que estou falando, não irei induzir ninguém a uma confusão.</li>
+</ol>
+<h3 id="comentários-de-alerta">Comentários de Alerta<a hidden class="anchor" aria-hidden="true" href="#comentários-de-alerta">#</a></h3>
+<p>Estes comentários são aqueles em que avisamos sobre determinado trecho do código. E não, isso não te dá abertura para escrever coisas desse tipo:</p>
+<p><img loading="lazy" src="/comentarios-04.png"></p>
+<p>O ideal, aqui, seria avisar sobre coisas que são praticamente inevitáveis, algo como um caso de teste que demore demais para ser executado. Assim, você pode comentar logo acima dele, explicando que ele foi desabilitado num primeiro momento devido ao tempo de execução, mas que pode ser executado sempre que houver um tempo disponível. Existem formas melhores de fazer isso, mas para esse objetivo, o comentário pode ser útil também.</p>
+<h3 id="comentários-todo">Comentários ToDo<a hidden class="anchor" aria-hidden="true" href="#comentários-todo">#</a></h3>
+<p><img loading="lazy" src="/comentarios-05.png"></p>
+<p>Começo esse com uma pergunta: qual foi a última vez que você voltou a um código para melhorar/implementar aquele trecho que você marcou um &ldquo;ToDo&rdquo; como comentário?</p>
+<p>Sinceramente, a resposta dessa pergunta vai indicar a utilidade desse comentário para você. Eu, particularmente, não gosto. Em boa parte das vezes, me envolvo no código, resolvo o problema e esqueço daquele ToDo feito há 2 dias. Por isso, prefiro priorizar o que deve ser feito. Para mim, um ToDo é uma task futura escondida, assim, nesse caso, é melhor registrá-la no JIRA (ou em qualquer outra plataforma com esse fim) do que dentro do seu próprio código. Mas se mesmo assim você preferir usar um ToDo, tudo bem (só não será convidado para o meu aniversário), existem ferramentas que potencializam os ToDos, evitando que você se esqueça deles (Sonar, por exemplo), e podendo ajudar bastante. Lembre-se que é sempre uma questão de manter o código claro e limpo. Então se você usa esses comentários e consegue manter a qualidade do código, vá em frente :).</p>
+<hr>
+<h2 id="comentários-ruins">Comentários Ruins<a hidden class="anchor" aria-hidden="true" href="#comentários-ruins">#</a></h2>
+<p>Agora é hora de tirar as crianças da sala, vamos falar dos Comentários Ruins, aqueles que você deve evitar a todo custo no código.</p>
+<h3 id="qualquer-comentário-mal-escrito">Qualquer comentário mal escrito<a hidden class="anchor" aria-hidden="true" href="#qualquer-comentário-mal-escrito">#</a></h3>
+<p>Como ressaltamos até esse momento, comentários na maioria das vezes podem (e muitas vezes, devem) ser dispensados. Contudo, nos casos em que eles são necessários, devemos fazê-los com muito cuidado, escrever de forma clara para que QUALQUER leitor possa utilizar seu código. Não esqueça, se nosso código precisa ser claro, nossos comentários também precisam ser!</p>
+<h3 id="comentários-redundantes">Comentários redundantes<a hidden class="anchor" aria-hidden="true" href="#comentários-redundantes">#</a></h3>
+<p>Tenho certeza que em algum momento da sua vida, você encontrou algum código parecido com isso:</p>
+<p><img loading="lazy" src="/comentarios-06.png"></p>
+<p>Observe como este comentário tem uma utilidade total de 0%, ele literalmente explica o que o código já deixa claro.</p>
+<p>Comentários assim, servem somente para poluir o seu código, e consequentemente, dificultar todo o entendimento.</p>
+<h3 id="comentários-longos">Comentários Longos<a hidden class="anchor" aria-hidden="true" href="#comentários-longos">#</a></h3>
+<p>Esse é bem claro, comentários longos somente poluem código, evite-os a todo custo, não escreva textos enormes em seus comentários. Existem lugares específicos para esse tipo de detalhamento, como uma documentação do seu Software, ou um artigo no Medium, caso você esteja muito inspirado.</p>
+<h3 id="códigos-como-comentários">Códigos como comentários<a hidden class="anchor" aria-hidden="true" href="#códigos-como-comentários">#</a></h3>
+<p><img loading="lazy" src="/comentarios-07.png"></p>
+<p>Exemplo retirado de Código limpo: Habilidades práticas do Agile Software(Robert C. Martin)</p>
+<p>Para mim, esses são os piores. É mais válido você colocar um link no seu código para esse site aqui: <a href="http://www.pudim.com.br/">http://www.pudim.com.br/</a>, tenho certeza que será mais útil.</p>
+<p>Códigos comentados, na maioria das vezes, não explicam nada, eles ficam ali, perdidos commit após commit, ninguém sabe se eles são um lembrete, se são importantes, ou mesmo, se são o resto perdido do código de alguém. Resumindo, eles são inúteis. A própria ideia de se salvar trechos de código como comentário para se ter um histórico, já deixou de fazer sentido desde que ferramentas de versionamento de código como o git passaram a ser utilizadas, e olha que já faz um tempinho hein…</p>
+<h3 id="comentários-enganadores">Comentários Enganadores<a hidden class="anchor" aria-hidden="true" href="#comentários-enganadores">#</a></h3>
+<p>Sabemos que, no fim do dia, nós programadores e programadoras, só queremos fazer um código bom e claro, porém, é comum encontrarmos comentários com informações bem confusas, ou mesmo informações que deixaram de ser verdade há um tempo. E qual seria o problema disso? Esses comentários criam o ambiente perfeito para alguém desavisado passar boa parte do dia tentando resolver um bug, com a única certeza de que aqueles comentários são a mais pura verdade, quando na verdade, eles são imensas desinformações, que podem, inclusive, estar omitindo uma informação que resolveria esse bug em minutos.</p>
+<hr>
+<h2 id="conclusão">Conclusão<a hidden class="anchor" aria-hidden="true" href="#conclusão">#</a></h2>
+<p>Existem muitos outros tipos de comentários bons e ruins, recomendo fortemente a leitura do livro Clean Code (do nosso famoso Uncle Bob), livro que usei como referência para este artigo. Garanto que você irá encontrar um aprofundamento muito bom sobre esse assunto, e muitos outros por lá.</p>
+<p>Por hoje é só galerinha, espero ter ajudado de alguma forma. Até a próxima! :)</p>
+<h3 id="referência">Referência:<a hidden class="anchor" aria-hidden="true" href="#referência">#</a></h3>
+<p>Código limpo: Habilidades práticas do Agile Software(Robert C. Martin)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/clean-code/">Clean Code</a></li>
+      <li><a href="http://localhost:1313/tags/boas-pr%C3%A1ticas/">Boas Práticas</a></li>
+      <li><a href="http://localhost:1313/tags/programa%C3%A7%C3%A3o/">Programação</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/posts/object-calisthenics/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Object Calisthenics: Don&#39;t Use Else</span>
+  </a>
+</nav>
+
+  </footer>
+<div class="comments-section" style="margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--border);">
+  <h3>Comentários</h3>
+  <script src="https://giscus.app/client.js"
+        data-repo="SEU_USUARIO/SEU_REPOSITORIO"
+        data-repo-id="SEU_REPO_ID"
+        data-category="General"
+        data-category-id="SEU_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="pt"
+        crossorigin="anonymous"
+        async>
+  </script>
+</div>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">CodeLab - Tech Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

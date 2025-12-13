@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programação on CodeLab - Tech Blog</title>
+    <link>http://localhost:1313/tags/programa%C3%A7%C3%A3o/</link>
+    <description>Recent content in Programação on CodeLab - Tech Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comentários, Amigos ou Inimigos?</title>
+      <link>http://localhost:1313/posts/comentarios-article/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/comentarios-article/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;comentários-amigos-ou-inimigos&#34;&gt;Comentários, Amigos ou Inimigos?&lt;/h2&gt;
+&lt;p&gt;Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códigos que utilizamos para explicar um pouquinho melhor aquilo que já foi feito. Iremos descobrir que comentários podem tanto ajudar quanto prejudicar nosso código. Então, chega de papo, e vamos direto ao que interessa!&lt;/p&gt;
+&lt;h3 id=&#34;explique-se-no-código&#34;&gt;Explique-se no código&lt;/h3&gt;
+&lt;p&gt;Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário.
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/comentarios-01.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Object Calisthenics: Don&#39;t Use Else</title>
+      <link>http://localhost:1313/posts/object-calisthenics/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/object-calisthenics/</guid>
+      <description>Explorando a regra &amp;#39;Don&amp;#39;t Use Else&amp;#39; do Object Calisthenics para escrever código mais limpo e legível</description>
+    </item>
+  </channel>
+</rss>

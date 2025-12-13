@@ -1,0 +1,61 @@
+/* Customizações para melhorar o layout da página inicial */
+
+/* Reduz o espaçamento do cabeçalho home-info */
+.home-info {
+    padding: 2rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.home-info .entry-content {
+    margin-top: 0.5rem !important;
+}
+
+/* Ajusta espaçamento entre título e conteúdo */
+.main {
+    padding-top: 1rem !important;
+}
+
+/* Reduz margem entre posts */
+.post-entry {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Melhora visual dos cards de post */
+.post-entry {
+    padding: 1.5rem !important;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Melhora espaçamento do título do post */
+.post-entry .entry-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Ajusta footer info dos posts */
+.post-entry .entry-footer {
+    margin-top: 0.75rem;
+}
+
+/* Reduz espaçamento superior da lista de posts */
+.main .posts-list {
+    margin-top: 0;
+}
+
+/* Melhora responsividade */
+@media screen and (max-width: 768px) {
+    .home-info {
+        padding: 1.5rem 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .post-entry {
+        padding: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+}
