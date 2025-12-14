@@ -16,9 +16,9 @@ Hoje, irei dar algumas dicas sobre comentários, sim, essa parte de nossos códi
 ### Explique-se no código
 
 Isso deve ser o centro de tudo, é daqui que deve partir toda e qualquer indagação sobre utilização de comentários. Resumidamente, um código deve ser claro o suficiente a ponto de ser autoexplicativo, por isso, na maioria das vezes, a presença de um comentário já revela que não foi possível chegar a esse nível de entendimento. Sim! O comentário é um indício de que o código não está claro, afinal de contas, por que escrever um comentário de 3 linhas sobre um if, sendo que um código bem organizado e nomeado, poderia naturalmente se explicar durante todo esse trecho? Aqui o que precisamos entender é que em 90% das vezes que pensamos em comentar um trecho de código, ele, na verdade, está mal escrito. Na maioria das vezes, um código limpo irá dispensar qualquer comentário.
-![](/comentarios-01.png)
+![](/CodeLab-TechBlog/comentarios-01.png)
 
-![](/comentarios-02.png)
+![](/CodeLab-TechBlog/comentarios-02.png)
 Perceba a diferença no primeiro exemplo, o if estava tão claro que não foi necessário incluir um comentário.
 
 
@@ -28,7 +28,7 @@ Perceba a diferença no primeiro exemplo, o if estava tão claro que não foi ne
 
 São aqueles que nos informam algo sobre o código (ah jura?). Um exemplo, seria uma breve explicação de um método antes que ele seja executado, algo como:
 
-![](/comentarios-03.png)
+![](/CodeLab-TechBlog/comentarios-03.png)
 
 Naturalmente, podemos notar que nesse caso, uma nomenclatura mais elaborada poderia trazer clareza a esse trecho, algo como: responderBeingTested(); logo, esse tipo de comentário pode ser excluído quando nomeamos melhor as variáveis envolvidas. No entanto, se for usado de forma clara e objetiva, sem problemas. Só tome cuidado com os excessos.
 
@@ -49,13 +49,13 @@ Nem tudo no mundo são flores… Você já deve ter ouvido essa frase, e no mund
 
 Estes comentários são aqueles em que avisamos sobre determinado trecho do código. E não, isso não te dá abertura para escrever coisas desse tipo:
 
-![](/comentarios-04.png)
+![](/CodeLab-TechBlog/comentarios-04.png)
 
 O ideal, aqui, seria avisar sobre coisas que são praticamente inevitáveis, algo como um caso de teste que demore demais para ser executado. Assim, você pode comentar logo acima dele, explicando que ele foi desabilitado num primeiro momento devido ao tempo de execução, mas que pode ser executado sempre que houver um tempo disponível. Existem formas melhores de fazer isso, mas para esse objetivo, o comentário pode ser útil também.
 
 ### Comentários ToDo
 
-![](/comentarios-05.png)
+![](/CodeLab-TechBlog/comentarios-05.png)
 
 Começo esse com uma pergunta: qual foi a última vez que você voltou a um código para melhorar/implementar aquele trecho que você marcou um "ToDo" como comentário?
 
@@ -75,7 +75,7 @@ Como ressaltamos até esse momento, comentários na maioria das vezes podem (e m
 
 Tenho certeza que em algum momento da sua vida, você encontrou algum código parecido com isso:
 
-![](/comentarios-06.png)
+![](/CodeLab-TechBlog/comentarios-06.png)
 
 Observe como este comentário tem uma utilidade total de 0%, ele literalmente explica o que o código já deixa claro.
 
@@ -87,7 +87,7 @@ Esse é bem claro, comentários longos somente poluem código, evite-os a todo c
 
 ### Códigos como comentários
 
-![](/comentarios-07.png)
+![](/CodeLab-TechBlog/comentarios-07.png)
 
 Exemplo retirado de Código limpo: Habilidades práticas do Agile Software(Robert C. Martin)
 
